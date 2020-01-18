@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@color/white"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="12sp"
+            android:text="Points"
+            android:textColor="@color/black" />
+
+    <TextView
+            android:id="@+id/txt_dsc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title"
+            android:textSize="13sp"
+            android:text="Average Sales"
+            android:textColor="@color/black" />
+
+    <TextView
+            android:id="@+id/txt_dsc_persentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="34%"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_dsc"
+            app:layout_constraintLeft_toRightOf="@+id/txt_dsc"
+            app:layout_constraintTop_toTopOf="@+id/txt_dsc" />
+
+
+    <LinearLayout
+            android:id="@+id/lay_bar"
+            android:layout_width="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/txt_dsc_persentage">
+
+        <ProgressBar
+                android:id="@+id/progress_bar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/curved_progress_bar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+        <ProgressBar
+                android:id="@+id/progress_bar2"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:layout_marginTop="8dp"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/curved_progress_bar"
+                app:layout_constraintLeft_toLeftOf="parent"
+               />
+    </LinearLayout>
+
+
+    <TextView
+            android:id="@+id/txt_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="34%"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/lay_bar"
+            app:layout_constraintTop_toBottomOf="@+id/txt_dsc_persentage" />
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lay_bar"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/txt_dsc3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title"
+                android:textSize="13sp"
+                android:text="Average Sales"
+                android:textColor="@color/black" />
+
+        <TextView
+                android:id="@+id/txt_dsc_persentage3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="34%"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_dsc"
+                app:layout_constraintLeft_toRightOf="@+id/txt_dsc"
+                app:layout_constraintTop_toTopOf="@+id/txt_dsc" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
